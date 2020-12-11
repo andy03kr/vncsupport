@@ -113,7 +113,7 @@ Run c:\vncsupport\build\vncsupport.exe Then connect to computer with vncdesktop.
 - Пакет [LZMA SDK](https://www.7-zip.org/sdk.html)
 
 ## Установка
-Настройка Linux компьютера подобна [vncdesktop](https://github.com/andy03kr/vncsupport)
+Настройка Linux компьютера подобна [vncdesktop](https://github.com/andy03kr/vncdesktop)
 
 ### Windows компьютер
 Загрузить и распаковать архив vncsupport.
