@@ -125,7 +125,7 @@ Run c:\vncsupport\build\vncsupport.exe Then connect to computer with vncdesktop.
 В меню "Conversions" - "Import Key" импортировать ключ id_rsa - "Save private key" - сохранить как vncproxy.ppk в каталог c:\vncsupport\bin\
 
 Для получения hostkey, в командной строке перейти в каталог c:\putty и выполнить
- > plink.exe -ssh -N -R 45554:127.0.0.1:5900 -P 22022 -i c:\vncsupport\bin\vncproxy.ppk -l vncproxy -batch vncproxy.home.lan
+ > plink.exe -ssh -N -L 15900:127.0.0.1:45554 -P 22022 -i c:\vncsupport\bin\vncproxy.ppk -l vncproxy -batch vncproxy.home.lan
 ```html
  The server's host key is not cached in the registry. You
  have no guarantee that the server is the computer you think it is.
