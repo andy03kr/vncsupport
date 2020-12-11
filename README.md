@@ -27,7 +27,7 @@ VNCsupport provides remote access to the user's desktop for technical support wh
 - Package [LZMA SDK](https://www.7-zip.org/sdk.html)
 
 ## Installation
-Installation for Linux computer looks like for [vncsupport](https://github.com/andy03kr/vncsupport)
+Installation for Linux computer looks like for [vncdesktop](https://github.com/andy03kr/vncdesktop)
 
 ### Windows computer
 Download and unpack the vncsupport archive.
