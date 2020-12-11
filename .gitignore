@@ -1,0 +1,6 @@
+*.ppk
+id_rsa
+*.exe
+bin/*.ini
+build/*.exe
+build/*.7z
