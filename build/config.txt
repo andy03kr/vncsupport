@@ -1,0 +1,4 @@
+;!@Install@!UTF-8!
+Title="gui v1.0.0.0"
+RunProgram="vncdesktop.exe"
+;!@InstallEnd@!
