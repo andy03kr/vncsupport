@@ -93,9 +93,7 @@ Then, in the c:\vncsupport\build directory, run
 
 On another computer, run vncdesktop.
 
-Run c:\vncsupport\build\vncsupport.exe
-
-Then connect to computer with vncdesktop.
+Run c:\vncsupport\build\vncsupport.exe then connect to computer with vncdesktop.
 
 # README.RU
 ## О vncsupport
@@ -185,6 +183,4 @@ Then connect to computer with vncdesktop.
 
 На другом компьютере запустить vncdesktop
 
-Запустите c:\vncsupport\build\vncsupport.exe
-
-Затем подключиться к компьютеру vncdesktop
+Запустите c:\vncsupport\build\vncsupport.exe и подключиться к компьютеру vncdesktop
