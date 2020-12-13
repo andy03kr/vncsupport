@@ -19,34 +19,22 @@ VNCsupport provides remote access to the user's desktop for technical support wh
 - AutoIT - for run test and build.
 
 ## Requirements
-- Linux computer with a public address
 - Windows computer with AutoIT installed for initial setup and testing
 - Package [putty.zip](https://the.earth.li/~sgtatham/putty/latest/w32/putty.zip)
 - Package [UltraVNC](https://www.uvnc.com/downloads/ultravnc/129-download-ultravnc-1231.html)
 - Package [7zip](https://www.7-zip.org/download.html)
 - Package [LZMA SDK](https://www.7-zip.org/sdk.html)
 
-## Installation
-Installation for Linux computer looks like for [vncdesktop](https://github.com/andy03kr/vncdesktop)
-
 ### Windows computer
 Download and unpack the vncsupport archive.
 Install AutoIT.
 Unzip the putty archive to c:\putty and run PUTTYGEN.EXE
 
+From [vncdesktop](https://github.com/andy03kr/vncdesktop) get the private key linux user and save in the local mochine.
 In the "Conversions" - "Import Key" menu, import the id_rsa key - "Save private key" - save as vncproxy.ppk to the c:\vncsupport\bin\ directory
 
-To get the hostkey, on the command line, go to the c:\putty directory and run command
- > plink.exe -ssh -N -L 15900:127.0.0.1:45554 -P 22022 -i c:\vncsupport\bin\vncproxy.ppk -l vncproxy -batch vncproxy.home.lan
-```html
- The server's host key is not cached in the registry. You
- have no guarantee that the server is the computer you think it is.
- The server's ssh-ed25519 key fingerprint is:
- ssh-ed25519 255 24:b1:c4:9e:c9:b5:d6:e6:03:f2:df:1f:64:dd:81:1d
- Connection abandoned.
-```
-Add the line "24:b1:c4:9e:c9:b5:d6:e6:03:12:df:1f:64:dd:81:1d" to the c:\vncsupport\bin\vncsupport.ini file
- > hostkey="24:b1:c4:9e:c9:b5:d6:e6:03:12:df:1f:64:dd:81:1d"
+From [vncdesktop](https://github.com/andy03kr/vncdesktop) get the hostkey and add the line hostkey="24:b1:c4:9e:c9:b5:d6:e6:03:12:df:1f:64:dd:81:1d"
+to the c:\vncsupport\bin\vncsupport.ini file
 
 Parameters in vncsupport.ini file (default)
 ```html
@@ -60,9 +48,7 @@ Parameters in vncsupport.ini file (default)
 From the UltraVNC package you will need vncviewer.exe
 
 Copy plink.exe and vncviewer.exe into c:\vncsupport\bin\ directory
-```html
-  vncviewer.exe - VNC viewer
-```
+
 On another computer, run vncdesktop.
 
 Open the vncsupport.au3 file in SciTE Script Editor and press F5 to start the project. Then connect to computer with vncdesktop.
@@ -71,7 +57,6 @@ Open the vncsupport.au3 file in SciTE Script Editor and press F5 to start the pr
 
 If you were able to connect without errors, you can build the project - in SciTE Script Editor open vncsupport.au3 and press F7.
 Or use C:\Program Files (x86)\AutoIt3\Aut2Exe tool for convert vncsupport.au3 to vncsupport.exe and set your own icon.
-The file c:\vncsupport\vncsupport.exe will be created
 
 Create an archive in the c:\vncsupport\build directory:
  > "c:\Program Files\7-Zip\7z.exe" a -r c:\vncsupport\build\vncsupport.7z c:\vncsupport\bin c:\vncsupport\vncsupport.exe
@@ -106,15 +91,11 @@ Run c:\vncsupport\build\vncsupport.exe then connect to computer with vncdesktop.
 - AutoIT - для тестового запуска и сборки.
 
 ## Требования
-- Linux компьютер с публичным адресом
 - Windows компьютер с установленным AutoIT для первичной настройки и тестирования
 - Пакет [putty.zip](https://the.earth.li/~sgtatham/putty/latest/w32/putty.zip)
 - Пакет [UltraVNC](https://www.uvnc.com/downloads/ultravnc/129-download-ultravnc-1231.html)
 - Пакет [7zip](https://www.7-zip.org/download.html)
 - Пакет [LZMA SDK](https://www.7-zip.org/sdk.html)
-
-## Установка
-Настройка Linux компьютера подобна [vncdesktop](https://github.com/andy03kr/vncdesktop)
 
 ### Windows компьютер
 Загрузить и распаковать архив vncsupport.
@@ -123,19 +104,11 @@ Run c:\vncsupport\build\vncsupport.exe then connect to computer with vncdesktop.
 
 Выполнить PUTTYGEN.EXE
 
+Из [vncdesktop](https://github.com/andy03kr/vncdesktop) получить приватный ключ linux пользователя и сохранить в локальном каталоге.
 В меню "Conversions" - "Import Key" импортировать ключ id_rsa - "Save private key" - сохранить как vncproxy.ppk в каталог c:\vncsupport\bin\
 
-Для получения hostkey, в командной строке перейти в каталог c:\putty и выполнить
- > plink.exe -ssh -N -L 15900:127.0.0.1:45554 -P 22022 -i c:\vncsupport\bin\vncproxy.ppk -l vncproxy -batch vncproxy.home.lan
-```html
- The server's host key is not cached in the registry. You
- have no guarantee that the server is the computer you think it is.
- The server's ssh-ed25519 key fingerprint is:
- ssh-ed25519 255 24:b1:c4:9e:c9:b5:d6:e6:03:f2:df:1f:64:dd:81:1d
- Connection abandoned.
-```
-Строку "24:b1:c4:9e:c9:b5:d6:e6:03:12:df:1f:64:dd:81:1d" добавить в файл c:\vncsupport\bin\vncsupport.ini параметр
- > hostkey="24:b1:c4:9e:c9:b5:d6:e6:03:12:df:1f:64:dd:81:1d"
+Из [vncdesktop](https://github.com/andy03kr/vncdesktop) получитья hostkey, строку hostkey="24:b1:c4:9e:c9:b5:d6:e6:03:12:df:1f:64:dd:81:1d"
+добавить в файл c:\vncsupport\bin\vncsupport.ini параметр
 
 В файл vncsupport.ini параметры (по-умолчанию)
 ```html
@@ -149,9 +122,7 @@ Run c:\vncsupport\build\vncsupport.exe then connect to computer with vncdesktop.
 Из пакета UltraVNC понадобится vncviewer.exe
 
 Скопировать plink.exe и vncviewer.exe в каталог c:\vncsupport\bin\
-```html
-  vncviewer.exe - VNC-вьювер
-```
+
 На другом компьютере запустить vncdesktop
 В SciTE Script Editor открыть файл vncsupport.au3 нажать F5 - запустится проект.
 
